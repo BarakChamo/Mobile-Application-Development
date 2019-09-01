@@ -6,3 +6,15 @@ Class repo for Mobile Application Development, Integrated Digital Media, Tandon 
 ### Important dates
 
 ### Class presentations
+
+### Relevant Resources
+
+#### Code
+##### JavaScript
+
+##### React
+
+##### React Native
+
+#### Design
+
