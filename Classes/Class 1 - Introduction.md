@@ -3,6 +3,8 @@
 ### Assignment - prep
 For next week, please install all the prerequisite tools and software to be ready to begin mobile application development on your computer and phone.
 
+These tools will facilitate modern, iterative application development on both your computer and your phones and allow you to debug, test and publish you applications easily.
+
 1. Signup for GitHub
 
 Sign up for a GitHub account [here](https://github.com/join).
