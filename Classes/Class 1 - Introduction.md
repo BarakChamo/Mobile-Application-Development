@@ -1,5 +1,7 @@
 ## Class 1 - Introduction
 
+
+
 ### Assignment - prep
 For next week, please install all the prerequisite tools and software to be ready to begin mobile application development on your computer and phone.
 
