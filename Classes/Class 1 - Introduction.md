@@ -1,7 +1,7 @@
 ## Class 1 - Introduction
 
 ### Resources
-[Getting started with Three.js](https://threejs.org/docs/#manual/en/introduction/Creating-a-scene)
+
 
 ### Assignment - prep
 For next week, please install all the prerequisite tools and software to be ready to begin mobile application development on your computer and phone.
