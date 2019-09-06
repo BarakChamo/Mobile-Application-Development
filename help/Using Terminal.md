@@ -26,6 +26,6 @@ Set the `Specified named task` to `{bash::bash}` and restart `cmder`.
   - `cd ~` navigates to the root user folder (`/users/Barak` for me for example) where the Documents folder is
 - Run `ls` to list the files and folders in the current directory
   - `ls -la` will print a table with more information, such as file size and wether the item is a file or folder.
-- To open the current folder in `Explorer` or `Finder` run `start .` or `open .`
+- To open the current folder in `Explorer` or `Finder` run `start .` or `open .`, whichever works.
   
 To learn how to use `git` in command line check the `Using Git` help page.
