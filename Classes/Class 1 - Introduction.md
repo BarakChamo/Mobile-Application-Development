@@ -7,6 +7,7 @@ Using React Native will let us use JavaScript to build native-quality applicatio
 To run our code and manage the development environment we'll use [Expo](https://expo.io/), a project built on top of React Native that provides advanced runtime tools and utilities for sharing, testing and publishing code (such as a nifty QR code based mobile testing app and 1-click app publishing).
 
 Let's get started using Expo!
+
 (before we get started though, follow the setup steps detailed in the assignment below)
 
 
