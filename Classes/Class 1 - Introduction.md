@@ -1,5 +1,20 @@
 ## Class 1 - Introduction
 
+In this class we'll be learning how to build cross-platform mobile applications using [React Native](https://facebook.github.io/react-native/), a framework developed and maintained by Facebook.
+
+Using React Native will let us use JavaScript to build native-quality applications using a language we know, and deploy our apps to both Android and iOS with minimal effort or changes to code.
+
+To run our code and manage the development environment we'll use [Expo](https://expo.io/), a project built on top of React Native that provides advanced runtime tools and utilities for sharing, testing and publishing code (such as a nifty QR code based mobile testing app and 1-click app publishing).
+
+Let's get started using Expo!
+(before we get started though, follow the setup steps detailed in the assignment below)
+
+
+#### 1. Test an example `Expo Snack` on your phone
+
+#### 2. Create a local blank project and test it your phone
+
+
 ### Resources
 
 
