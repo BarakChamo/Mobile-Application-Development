@@ -34,6 +34,7 @@ If you're not comfortable with using Terminal, follow [this help section](https:
 8. Make sure your phone is on the same WiFi network as your computer and scan the QR Code.
   - On Android, the Expo app will have a QR Code scanner.
   - On iOS use the camera app, it has a hidden QS scanner.
+9. Your app will open on your phone! Just like with snack, if you change code in `App.js` and save, the view on your phone will update.
 
 
 ### Resources
