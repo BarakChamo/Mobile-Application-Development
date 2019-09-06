@@ -42,3 +42,22 @@ This will update the local repository with all updates from the remote one.
 
 ![Fetch origin to get latest updates](https://github.com/BarakChamo/Mobile-Application-Development/blob/master/help/files/github%20desktop%20-%20fetch.PNG)
 
+
+### Option 2: Using the git command line tools
+
+#### 1. Navigate to the parent folder
+Open a new terminal window and `cd` to the folder where you'd like to clone the repository.
+
+![`cd` to parent directory](https://github.com/BarakChamo/Mobile-Application-Development/blob/master/help/files/cmd%20-%20cd.PNG)
+
+#### 2. Run the `git clone` command
+To clone the repo, run `git clone {REPO URL}`, replace `{REPO URL}` with the URL you copied from GitHub previously.
+
+![clone the git repo](https://github.com/BarakChamo/Mobile-Application-Development/blob/master/help/files/git%20clone.PNG)
+
+#### 3. Get latest code with `git pull`
+Once inside the repo folder, you can always run `git pull` to get the latest updates.
+
+![Pull latest updates](https://github.com/BarakChamo/Mobile-Application-Development/blob/master/help/files/git%20pull.PNG)
+
+
