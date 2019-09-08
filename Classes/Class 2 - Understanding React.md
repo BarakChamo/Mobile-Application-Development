@@ -1,8 +1,11 @@
 ## Class 1 - Understanding React & React Native
 
 In this class we'll be learning how to build cross-platform mobile applications using [React Native](https://facebook.github.io/react-native/), a framework developed and maintained by Facebook.
-Today we'll focus on understanding the React JavaScript framework, how React and React Native relate to each other and how to get started writing
-React-based applications.
+Today we'll focus on understanding the React JavaScript framework, how React and React Native relate to each other and how to get started writing React-based applications.
+
+React is a component-based web application framwork, each component contains a small amou 
+
+Let's look at a basic React application example [on this glitch](https://glitch.com/~react-basic).
 
 ### Resources
 
