@@ -47,5 +47,6 @@ more on that later.
 - [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
 
 #### Understanding React-Native
+- [How React Native works](https://hackernoon.com/understanding-react-native-bridge-concept-e9526066ddb8)
 
 ### Assignment - your first React Native app
