@@ -47,6 +47,9 @@ more on that later.
 ### Resources
 
 #### JavaScript Classes and Object-oriented programming
+
+[Classes and class extensions example from class](https://github.com/BarakChamo/Mobile-Application-Development/blob/master/Classes/examples/classes-and-extensions.js) 
+
 - [JavaScript Classes on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Class extensions on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
 - [JSX in depth](https://reactjs.org/docs/jsx-in-depth.html)
