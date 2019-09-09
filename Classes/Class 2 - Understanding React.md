@@ -18,8 +18,16 @@ You could write your own component to, for example, render a popup window by def
 
 To define this `<Popup/>` component we'll have to extend the `React.Component`, every component we write will be a [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) [extension](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends).
 
+Each component receives properties from its parent, just like the `title` and `content` in our `<Popup>` example,
+these will be used inside the component class instance to render the component and pass on to its childern components.
+
 Let's look at a basic React application example [on this glitch](https://glitch.com/~react-basic).
 
+You might find this hybrid `JavaScript + HTML` format odd, it's called `JSX` and combined both JavaScript code
+and declarative component markup. It allows us to define component hierarchies in HTML-like syntax in the same 
+place as our code so it's much easier to manage! (you'll get used to it, it's actually pretty useful).
+
+If you're still unclear on how JSX works, [check out this post](https://reactjs.org/docs/jsx-in-depth.html)
 
 #### What is React Native?
 
@@ -41,6 +49,7 @@ more on that later.
 #### JavaScript Classes and Object-oriented programming
 - [JavaScript Classes on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Class extensions on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
+- [JSX in depth](https://reactjs.org/docs/jsx-in-depth.html)
 
 #### Understanding React
 - [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
@@ -48,5 +57,6 @@ more on that later.
 
 #### Understanding React-Native
 - [How React Native works](https://hackernoon.com/understanding-react-native-bridge-concept-e9526066ddb8)
+- [React Native intro tutorial](https://facebook.github.io/react-native/docs/tutorial.html)
 
 ### Assignment - your first React Native app
