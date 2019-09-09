@@ -55,8 +55,11 @@ more on that later.
 - [JSX in depth](https://reactjs.org/docs/jsx-in-depth.html)
 
 #### Understanding React
+ [Annotated React example from class on glitch.com](https://glitch.com/edit/#!/react-basic?path=app/app.jsx:6:8) 
+
 - [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
 - [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
+- [Handling events in React](https://reactjs.org/docs/handling-events.html)
 
 #### Understanding React-Native
 - [How React Native works](https://hackernoon.com/understanding-react-native-bridge-concept-e9526066ddb8)
