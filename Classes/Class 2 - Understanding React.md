@@ -62,4 +62,5 @@ more on that later.
 - [How React Native works](https://hackernoon.com/understanding-react-native-bridge-concept-e9526066ddb8)
 - [React Native intro tutorial](https://facebook.github.io/react-native/docs/tutorial.html)
 
-### Assignment - your first React Native app
+### Assignment - React Components
+`To be completed`
