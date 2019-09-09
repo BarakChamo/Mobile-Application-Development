@@ -7,6 +7,7 @@ Class repo for Mobile Application Development, Integrated Digital Media, Tandon 
 
 ### Class pages
 - [Class 1](Classes/Class%201%20-%20Introduction.md)
+- [Class 2](Classes/Class%202%20-%20Understanding%20React.md)
 
 ### Relevant Resources
 
