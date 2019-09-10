@@ -66,4 +66,17 @@ more on that later.
 - [React Native intro tutorial](https://facebook.github.io/react-native/docs/tutorial.html)
 
 ### Assignment - React Components
-`To be completed`
+In a `glitch.com`, build an interactive, single-page To-Do list.
+Your To-Do list app should feature the following:
+
+1. A dynamic list of To-Do's, including a title, content and date.
+2. Indication of completion status
+3. A button or checkbox to complete each To-Do.
+4. An input field to create new To-Do's.
+5. Any other fancy features you might like (filtering? multiple selection? coloring? emjoi support?)
+
+Extra credit for:
+1. Breaking your To-Do app into multiple components.
+2. Breaking those multiple components into multiple `.JSX` files.
+
+Make your glitch public and share the link on the `Class 2 Assignment` GitHub isse.
