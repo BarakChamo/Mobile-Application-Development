@@ -44,6 +44,10 @@ will render to the coresponding elements for each platform: iOS or Android.
 Also, just remember that React-Native doesn't work in a browser, so there's no CSS, we'll be writing styles in code,
 more on that later.
 
+### Examples (on glitch.com)
+- [Basic list](https://glitch.com/~react-basic)
+- [ToDo list with inputs and validation](https://glitch.com/edit/#!/react-todo-example?path=app/app.jsx:10:31)
+
 ### Resources
 
 #### JavaScript Classes and Object-oriented programming
