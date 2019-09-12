@@ -53,6 +53,7 @@ more on that later.
 - [JavaScript Classes on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Class extensions on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
 - [JSX in depth](https://reactjs.org/docs/jsx-in-depth.html)
+- [Context, binding and arrow functions explained](https://www.codementor.io/dariogarciamoya/understanding-this-in-javascript-with-arrow-functions-gcpjwfyuc)
 
 #### Understanding React
  [Annotated React example from class on glitch.com](https://glitch.com/edit/#!/react-basic?path=app/app.jsx:6:8) 
