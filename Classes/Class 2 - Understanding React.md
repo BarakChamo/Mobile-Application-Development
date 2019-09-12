@@ -60,6 +60,7 @@ more on that later.
 - [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
 - [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
 - [Handling events in React](https://reactjs.org/docs/handling-events.html)
+- [React Components - Lifecycle methods and class properties](https://reactjs.org/docs/react-component.html)
 
 #### Understanding React-Native
 - [How React Native works](https://hackernoon.com/understanding-react-native-bridge-concept-e9526066ddb8)
