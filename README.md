@@ -17,6 +17,7 @@ Class repo for Mobile Application Development, Integrated Digital Media, Tandon 
 ##### JavaScript
 
 ##### React
+- [React Component Lifecycle Diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
 ##### React Native
 
