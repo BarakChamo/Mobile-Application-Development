@@ -139,6 +139,7 @@ and combine them together.
 - [Complete list of React Native components](https://facebook.github.io/react-native/docs/components-and-apis)
 - [Understanding the flexbox layout](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [React Native's Flexbox guide](https://facebook.github.io/react-native/docs/flexbox)
+- [Running Expo in the browser](https://docs.expo.io/versions/latest/introduction/running-in-the-browser/)
 
 ### Assignment - React Native
 For next class, your assignment is to build your first mobile app:
