@@ -140,6 +140,14 @@ and combine them together.
 - [Understanding the flexbox layout](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [React Native's Flexbox guide](https://facebook.github.io/react-native/docs/flexbox)
 - [Running Expo in the browser](https://docs.expo.io/versions/latest/introduction/running-in-the-browser/)
+- [Publishing Expo apps](https://docs.expo.io/versions/latest/workflow/publishing/)
+
+#### Running the Todo App example
+To run and continue working on the Todo app example we worked on in class:
+1. Pull, clone or download the repo to your computer to get the latest files.
+2. In your terminal, navigate (or `cd`) to [`Classes/examples/todo-app`](https://github.com/BarakChamo/Mobile-Application-Development/tree/master/Classes/examples/todo-app) folder.
+3. Once inside the `todo-app` folder, run `npm install` to make sure all dependencies are installed.
+4. You can now run `npm start` to run the project and continue development on your assignment.
 
 ### Assignment - React Native
 For next class, your assignment is to build your first mobile app:
@@ -156,4 +164,4 @@ similar to the previous assignment, your app should feature:
 
 You could even convert your existing components to React Native and reuse the TO-DO editing logic.
 
-Publish your app with expo and post it to the class 3 issue along with your full name.
+[Publish your app with expo](https://docs.expo.io/versions/latest/workflow/publishing/) and post it to the class 3 issue along with your full name.
