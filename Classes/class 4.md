@@ -54,7 +54,7 @@ FlatList has two significant performance benefits compared to using a ScrollView
 To learn more about tradeoffs and benefits of using a `FlatList` refer to [the documentation](https://facebook.github.io/react-native/docs/flatlist).
 
 
-#### `SectionList`
+#### [`SectionList`](https://facebook.github.io/react-native/docs/sectionlist)
 
 `SectionList` extends the `FlatList` to address some limitations and provide commonly needed extra functionality
 to group items by section and render section headers and organizational UI.
