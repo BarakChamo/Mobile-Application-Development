@@ -22,6 +22,8 @@ Class repo for Mobile Application Development, Integrated Digital Media, Tandon 
 - [React Component Lifecycle Diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
 ##### React Native
+- [Expo.io documentation](https://docs.expo.io/versions/v35.0.0/)
+- [React Navigation](https://reactnavigation.org/docs/en/hello-react-navigation.html)
 
 #### Design
 
