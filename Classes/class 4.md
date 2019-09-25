@@ -71,7 +71,7 @@ You can find the complete documentation [here](https://reactnavigation.org/docs/
 
 #### Installing `react-navigation`
 To begin using the navigation library, install the `react-navigation` npm package to your project.
-Further installation instructions can be found [here](https://docs.expo.io/versions/v35.0.0/react-native/navigation/).
+Further installation instructions can be found [on Expo](https://docs.expo.io/versions/v35.0.0/react-native/navigation/) and [the documentation](https://reactnavigation.org/docs/en/getting-started.html).
 
 #### Views and screens
 In order to implement navigation in our application, we must define "pages" or "routes".
