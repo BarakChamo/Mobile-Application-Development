@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import TodoList from './TodoList' 
 
 const styles = StyleSheet.create({  
@@ -11,27 +13,29 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'stretch',
-    backgroundColor: 'lightgray'
   },
   
   footer: {
-    height: 75,
-    backgroundColor: 'gray'
+    height: 50,
   },
 
   header: {
     height: 75,
     backgroundColor: 'gray',
     flexDirection: 'row',
-    alignItems: 'stretch',
+    alignItems: 'flex-end',
+    paddingBottom: 12,
     justifyContent: 'center'
   },
 
   headerText: {
-    fontSize: 24,
-    flex :1,
-    textTransform: 'uppercase',
-    alignSelf: 'center'
+    fontSize: 20,
+    color: 'white'
+  },
+  footerText: {
+    fontSize: 18,
+    color: 'white',
+    textTransform: "uppercase"
   }
 });
 
@@ -41,12 +45,14 @@ export default function App() {
   return (
       <View style={styles.container}>
           <View style={styles.header}>
-            <Text style={styles.headerText}>My Todo App</Text>
+            <Text style={styles.headerText}>My Shopping List</Text>
           </View> 
           <View style={styles.mainContent}>
             <TodoList />
           </View>
-          <View style={styles.footer}></View>
+          <View style={[styles.header, styles.footer]}>
+            <Text style={styles.footerText}>Clear Completed</Text>
+          </View>
       </View>
   );
 }
