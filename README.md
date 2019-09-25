@@ -17,6 +17,8 @@ Class repo for Mobile Application Development, Integrated Digital Media, Tandon 
 
 #### Code
 ##### JavaScript
+- [JavaScript data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+- [Primitive types and reference types in JavaScript](https://gist.github.com/branneman/7fb06d8a74d7e6d4cbcf75c50fec599c)
 
 ##### React
 - [React Component Lifecycle Diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
