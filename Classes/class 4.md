@@ -144,4 +144,15 @@ To get the values of these extra parameters, we use the `getParam` method:
 )
 
 ### Assignment - React Native
-``
+For next week, extend your Todo apps with multiple views. These could be:
+- A details view for a single todo item
+- A seprate `New Todo` screen
+- A completed Todos archive
+
+Using separate pages will allow you to collect and view more details than a 
+single list could show. Your app could store additional data such as time of creation,
+associated location, tags, contacts, etc. It could also conditionaly render 
+different kinds of views or navigate to different detail views depending on the
+type of todo or the data stored.
+
+Use parameterized routing to pass information back and forth between routes.
