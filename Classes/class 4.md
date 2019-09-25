@@ -146,6 +146,7 @@ To get the values of these extra parameters, we use the `getParam` method:
 - [`react-navigation` documentation](https://reactnavigation.org/docs/en/headers.html)
 - [Navigation example Expo Snack](https://snack.expo.io/@barakchamo/83d672?platform=android&name=First%20navigation&dependencies=react-navigation%2Creact-navigation-stack%2Creact-navigation-tabs%2Creact-navigation-drawer&sourceUrl=https%3A%2F%2Freactnavigation.org%2Fexamples%2F4.x%2Fnew-screen.js
 )
+- [Using the Navigator's headers](https://reactnavigation.org/docs/en/headers.html)
 
 ### Assignment - React Native
 For next week, extend your Todo apps with multiple views. These could be:
