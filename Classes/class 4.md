@@ -71,7 +71,11 @@ You can find the complete documentation [here](https://reactnavigation.org/docs/
 
 #### Installing `react-navigation`
 To begin using the navigation library, install the `react-navigation` npm package to your project.
-Further installation instructions can be found [here](https://docs.expo.io/versions/v35.0.0/react-native/navigation/).
+Further installation instructions can be found [on Expo](https://docs.expo.io/versions/v35.0.0/react-native/navigation/) and [the documentation](https://reactnavigation.org/docs/en/getting-started.html).
+
+Install `react-navigation` and additional dependencies by running
+` expo install react-navigation react-native-gesture-handler react-native-reanimated react-native-screens react-navigation-stack`
+in your project folder
 
 #### Views and screens
 In order to implement navigation in our application, we must define "pages" or "routes".
@@ -140,6 +144,20 @@ To get the values of these extra parameters, we use the `getParam` method:
 - [FlatList documentation](https://facebook.github.io/react-native/docs/flatlist)
 - [SectionList documentation](https://facebook.github.io/react-native/docs/sectionlist)
 - [`react-navigation` documentation](https://reactnavigation.org/docs/en/headers.html)
+- [Navigation example Expo Snack](https://snack.expo.io/@barakchamo/83d672?platform=android&name=First%20navigation&dependencies=react-navigation%2Creact-navigation-stack%2Creact-navigation-tabs%2Creact-navigation-drawer&sourceUrl=https%3A%2F%2Freactnavigation.org%2Fexamples%2F4.x%2Fnew-screen.js
+)
+- [Using the Navigator's headers](https://reactnavigation.org/docs/en/headers.html)
 
 ### Assignment - React Native
-``
+For next week, extend your Todo apps with multiple views. These could be:
+- A details view for a single todo item
+- A seprate `New Todo` screen
+- A completed Todos archive
+
+Using separate pages will allow you to collect and view more details than a 
+single list could show. Your app could store additional data such as time of creation,
+associated location, tags, contacts, etc. It could also conditionaly render 
+different kinds of views or navigate to different detail views depending on the
+type of todo or the data stored.
+
+Use parameterized routing to pass information back and forth between routes.
