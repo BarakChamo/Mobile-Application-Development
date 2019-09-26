@@ -109,19 +109,26 @@ const styles = StyleSheet.create({
 })
 
 class TodoList extends React.Component {
+    static navigationOptions = {
+      title: 'Shopping List',
+    }
+
     constructor(props) {
         // Initialize the React Component class first
         super(props)
 
+        const initialItems = [] //INITIAL_DATA.map(({label, done}, i) => ({label, done, i}))
+
         // Define initial state, an empty list of items and an empty input string
         this.state = {
             value: '',
-            items: INITIAL_DATA.map(({label, done}, i) => ({label, done, i}))
+            items: initialItems
         }
 
         // Bind input handlers to the current context
         this.onBoundInputChange = this.onInputChange.bind(this)
         this.onBoundButtonPress = this.onButtonPress.bind(this)
+        this.onBoundToggleDone = this.onToggleDone.bind(this)
     }
 
     onInputChange(text) {
@@ -133,16 +140,31 @@ class TodoList extends React.Component {
     onButtonPress() {
         // On button press, add the current value of the input field to the items array
         const items = this.state.items
-        items.push({label: this.state.value, done: false})
+        items.push({label: this.state.value, done: false, i: this.state.items.length})
 
         // Update the state with the new list and clear the input field's value
         this.setState({ value: '', items: items })
     }
 
+    // The onToggleDone is passed to each todo item and will be called 
+    // when the touchable component inside it is pressed
+    onToggleDone(index) {
+      const item = this.state.items[index]
+      item.done = !item.done
+
+      // Here we call .slice(0) on the array of items to create a new copy of the items array
+      // This is necessary because we need to provide the `FlatList` with a new array in order for it to update
+      // Passing the same array will result in no changes being detected on the `data` prop of the list
+      this.setState({items: this.state.items.slice(0)})
+
+      // Here we call navigate to switch to the `Details` view we defined in App.js
+      // We also provide the currently pressed item as additional routing data
+      this.props.navigation.navigate('Details', { item: item })
+    }
+
     render() {
         // Map the list of items in the state to a list of TodoItem components
-        // const todoItems = this.state.items.map((item) => <TodoItem key={item.label} item={item.label} done={item.done} />)
-
+        // const todoItems = this.state.items.map((item) => <TodoItem key={item.label} item={item} />)
 
         // Render the list
         return (
@@ -166,7 +188,15 @@ class TodoList extends React.Component {
                     data={this.state.items}
                     removeClippedSubviews={true}
                     initialNumToRender={3}
-                    renderItem={(props) => <TodoItem item={props.item} /> }
+                    extraData={this.state.items.length}
+                    renderItem={(props) => (
+                      <TodoItem
+                        label={props.item.label}
+                        done={props.item.done}
+                        index={props.item.i}
+                        onToggleDone={this.onBoundToggleDone}
+                      />
+                    ) }
                     keyExtractor={item => String(item.i)}
                 />
             </View>
