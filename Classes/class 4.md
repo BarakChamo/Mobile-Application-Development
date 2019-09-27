@@ -74,7 +74,9 @@ To begin using the navigation library, install the `react-navigation` npm packag
 Further installation instructions can be found [on Expo](https://docs.expo.io/versions/v35.0.0/react-native/navigation/) and [the documentation](https://reactnavigation.org/docs/en/getting-started.html).
 
 Install `react-navigation` and additional dependencies by running
+
 ` expo install react-navigation react-native-gesture-handler react-native-reanimated react-native-screens react-navigation-stack`
+
 in your project folder
 
 #### Views and screens
