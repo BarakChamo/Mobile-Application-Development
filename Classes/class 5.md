@@ -36,8 +36,100 @@ The `render props` design pattern is a way of designing components while removin
 of their content and data requirements, in cases where the same component may be used with different state or to 
 eliminate deeply nested references and prop propagation. In fact, we've been using this pattern already but haven't really discussed it in detail.
 
+When a component is rendered, such as a `View` or a `Text`, any content rendered inside it in a containing component
+will be available inside as a special property, `props.children`. This is exactly how the React Native components work:
+
+```jsx
+<View>
+  <Text>Hello World!</Text>
+</View>
+```
+
+`View` receives a fragment containing the rendered `<Text/>` as the `children` value, while `Text` receives plain text.
+We could easily our own decoupled component as well, to render any kind of content inside:
+
+```jsx
+const MyParentComponent = (props) => (
+  <View>
+    {props.children}
+  </View>
+)
+
+const MyChildProp = (props) => (
+  <Text>{props.content}</Text>
+)
+
+return (
+  <MyParentComponent>
+    <MyChildComponent content="Hello world!" />
+  </MyParentComponent>
+)
+```
+
+By using the `children` prop, or any other prop that receives a function that renders components (such as the `renderItem` prop on the `FlatList` component), we can decouple a component from not only its data, but its particular implementation of content. That means we can create higher-level abstractions of components such as forms, popups, cards, menus, lists and any other kind of UI container. It 
+also means passing data down the component tree doesn't require as many components to be tightly coupled with our data structure as well.
+
+For example, in out Todo list example, the main `TodoList` component uses a `FlatList` to render a list of items. This list uses the `renderItem` property to render each item, so all rendering, data and assignment of event handlers that has to do with the specifics of managing Todo items is written at the `TodoList` component level, never inside the `FlatList` itself, this is a great way to "flatten" data use and make it easy to share global application state between different parts of our app.
+
+```jsx
+class TodoList extends Component {
+  render () {
+    ...
+    <FlatList
+        data={this.state.items}
+        extraData={this.state.items.length}
+        renderItem={(props) => (
+          <TodoItem
+            label={props.item.label}
+            done={props.item.done}
+            index={props.item.i}
+            onToggleDone={this.onBoundToggleDone}
+          />
+        ) }
+        keyExtractor={item => String(item.i)}
+    />
+    ...
+  }
+}
+```
+
 
 ### The flux data-flow pattern
+Render props go a long way in helping us reduce the complexity and depth of our component trees, write less data-coupled and component-coupled components and share the same state across our application. However, passing state around and handling the myriad of ways in which state can be transformed and updated can still get out of control in a non-trivial, multi-function application.
+
+For example:
+Imagine our Todo app began to grow in views and functionality: we now have a list of various kinds of todos, the ability to add, remove, share, edit and mark todos as completed. So far, each state-related action has been created on the parent as a bound handler that calls `setState`. If we added all this functionality, our component will grow into something along the lines of:
+
+```jsx
+class TodoList extends Component {
+  onAddTodo() {
+  }
+  
+  onEditTodo() {
+  }
+  
+  onToggleTodo() {
+  }
+  
+  onShareTodo() {
+  }
+  
+  onDeleteTodo() {
+  }
+  
+  onReorderTodo() {
+  }
+  
+  onTodoDetails() {
+  }
+  
+  // the list can go on and on...
+}
+```
+
+Clearly, we need a better model for dealing with complex application state, preferably in a way that can be abstracted from the component itself.
+
+The `flux` model provides just that, a clear model for data management in a unidirectional data-flow architecture (which React follows).
 
 ### Resources
 - [Understanding the "render props" pattern](https://reactjs.org/docs/render-props.html)
