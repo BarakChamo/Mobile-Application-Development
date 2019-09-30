@@ -93,7 +93,6 @@ class TodoList extends Component {
 }
 ```
 
-
 ### The flux data-flow pattern
 Render props go a long way in helping us reduce the complexity and depth of our component trees, write less data-coupled and component-coupled components and share the same state across our application. However, passing state around and handling the myriad of ways in which state can be transformed and updated can still get out of control in a non-trivial, multi-function application.
 
@@ -131,21 +130,50 @@ Clearly, we need a better model for dealing with complex application state, pref
 
 The `flux` model provides just that, a clear model for data management in a unidirectional data-flow architecture (which React follows).
 
+At a high-level, it introduces the following steps to the data cycle of an application:
+![The Flux process](https://facebook.github.io/flux/img/overview/flux-simple-f8-diagram-1300w.png)
+
+- `Actions` are events or triggers that introduce changes and updates to state.
+- `Dispatcher` propagates `actions` and digests state transformations.
+- `Store` is a container for application state that can be bound to a component and shared across the app.
+- `View` is a component that renders content based on the store's state.
+
+`Action` propagation is the key to making this unidirectional flow into more of a cycle of updates:
+![Action propagation in Flux](/flux/img/overview/flux-simple-f8-diagram-with-client-action-1300w.png)
+
+But remember, even though actions are called up the tree, data still on "flows through React" in one way, this is contrast
+to data-bound architectures such as Angular that allow data to be manipulated from both sides of a shared property.
+
+Essentialy, this model follows that same micro-pattern we used in our todo app.
+- State lives on a higher-level component and flows down the tree
+- Handlers are passed down to trigger actions
+- Actions propagate up the tree and manipulate state
+- State changes trigger application updates and re-renders
+
 ### Resources
 - [Understanding the "render props" pattern](https://reactjs.org/docs/render-props.html)
 - [Introduction to Flux](https://facebook.github.io/flux/docs/in-depth-overview)
 - [Redux, a popular flux implementation](https://redux.js.org/)
 
 ### Assignment - Midterms
-For next week, extend your Todo apps with multiple views. These could be:
-- A details view for a single todo item
-- A seprate `New Todo` screen
-- A completed Todos archive
+For your midterm project you should design and implement a new mobile application that features what you've
+learned in class so far, namely:
 
-Using separate pages will allow you to collect and view more details than a 
-single list could show. Your app could store additional data such as time of creation,
-associated location, tags, contacts, etc. It could also conditionaly render 
-different kinds of views or navigate to different detail views depending on the
-type of todo or the data stored.
+- React Native view composition and mobile rendering.
+- JS-based styling and use of flexbox layouts.
+- Using interactive elements (such as inputs, buttons, toggles and other native UI).
+- Implementing multi-page applications and navigation.
+- Handling complex application state.
 
-Use parameterized routing to pass information back and forth between routes.
+Your project must include:
+- Three navigation views or more.
+- Shared state and state updates between views.
+- Three forms of user input / interaction.
+- At least one React Native or Expo component or API not taught in class.
+
+The midterm project is one of two larger projects you'll be completing this semester and is 
+a great opportunity to practice what you've learned and build functional apps that could
+be featured on your portfolios!
+
+You are welcome to explore and use any 3rd-party libraries as long as they are compatible with Expo's managed environment,
+these include all the modules bundled with Expo already such as maps, camera access, multimedia interfaces, geolocation, etc.
