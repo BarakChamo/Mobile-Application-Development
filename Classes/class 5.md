@@ -93,6 +93,8 @@ class TodoList extends Component {
 }
 ```
 
+[This Expo Snack](https://snack.expo.io/@barakchamo/render-props) has three examples of building React components: A coupled components, a fully-decoupled component, and a hybrid composited component.
+
 ### The flux data-flow pattern
 Render props go a long way in helping us reduce the complexity and depth of our component trees, write less data-coupled and component-coupled components and share the same state across our application. However, passing state around and handling the myriad of ways in which state can be transformed and updated can still get out of control in a non-trivial, multi-function application.
 
