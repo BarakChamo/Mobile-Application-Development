@@ -141,7 +141,7 @@ At a high-level, it introduces the following steps to the data cycle of an appli
 - `View` is a component that renders content based on the store's state.
 
 `Action` propagation is the key to making this unidirectional flow into more of a cycle of updates:
-![Action propagation in Flux](/flux/img/overview/flux-simple-f8-diagram-with-client-action-1300w.png)
+![Action propagation in Flux](https://facebook.github.io/flux/img/overview/flux-simple-f8-diagram-with-client-action-1300w.png)
 
 But remember, even though actions are called up the tree, data still on "flows through React" in one way, this is contrast
 to data-bound architectures such as Angular that allow data to be manipulated from both sides of a shared property.
