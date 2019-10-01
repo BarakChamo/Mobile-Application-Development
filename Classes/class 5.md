@@ -152,6 +152,64 @@ Essentialy, this model follows that same micro-pattern we used in our todo app.
 - Actions propagate up the tree and manipulate state
 - State changes trigger application updates and re-renders
 
+We can accomplish most of the proposed interface simply by "hoisting" application state and passing handlers and props down to nested components, this will cover the `Action`, `Store` and `View` parts of this spec. The intersting part, and that which will clean up our
+storage of state and specific modifier class methods, is the flux `Dispatcher`.
+
+### The `Dispatcher` - a unified action interface
+As mentioned previously, flux is not a library or data management module. Rather it is a proposed specification for dealing with data in our app. The same is true for the dispatcher.
+
+The `dispatcher` is a centralized module for processing actions (which we'll discuss in a minute), and previous state. Each action is handled and any required changes to state are applied, resulting in a new state being returned by the dispatcher after every cycle. The dispatcher model allows us to **externalize** the various state-modifying handler methods we implemented on our classes into a separate JavaScript module that purely manages state and actions, not views, components or rendering.
+
+But what is a reducer? and what is an action?
+
+You can think of the dispatcher as a general case `onSomethingHappened` event, a function that takes events and deals with any possible change to global application state. Actions in this context are just a construct, data we pass to the dispatcher to tell it what exactly happened. These `actions` are passed by the `dispatcher` to your `reducer`, a simple function that gets old state and current action as arguments, and is expected to return new state.
+
+Typically, actions are plain JavaScript objects that include the actions `TYPE`, such as `FOLLOW_USER`, `ADD_TODO`, `MARK_TODO_COMPLETED`. They denote changes to state, not UI interactions, so you won't see `ON_BUTTON_PRESS`, but rather the desired state manipulation in response to the interaction. Actions can include optional data or parameters, just like our navigators, but the particular implementation is up to you.
+
+So, for example, an action to add a todo item could be defined as an object:
+
+```javascript
+const action = {
+  type: 'ADD_TODO',
+  params: {
+    label: 'Learn Flux',
+    completed: false
+  }
+}
+```
+
+Reducers, likewise, are simple functions that handle actions at the top-level of the application. They are usually implemented as long `switch` statements that accept the old state and an action and `reduce` all state operations into a new state. Here's an example:
+
+```javascript
+function myReducer(state, type, params) {
+  switch(type):
+    // Match the action type
+    case 'ADD_TODO':
+      // Add a todo to the list of todos based on passed params in the action
+      const todos = state.todos
+      todos.push({label: params.label, completed: params.completed})
+      
+      // return a new state object
+      return {
+        // Here we destructure the previous state to make sure all additional keys remain in the new state object
+        ...state
+        // replace the existing todos with a new array of todo items that includes our new item
+        todos
+      }
+      
+    
+    // It's important that the function always return a valid state
+    // If no matching action was found, we must return the previous state
+    default:
+      return state
+}
+```
+
+This action could be triggered by calling a dispatcher implementation: `dispatch(action)` which will call your reducer
+to calculate new state. Once this new state is calculated, we can call `setState()` at the top level of our application
+to trigger a re-render with  fresh state.
+
+
 ### Resources
 - [Understanding the "render props" pattern](https://reactjs.org/docs/render-props.html)
 - [Introduction to Flux](https://facebook.github.io/flux/docs/in-depth-overview)
