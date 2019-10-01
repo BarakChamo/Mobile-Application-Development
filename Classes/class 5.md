@@ -169,7 +169,8 @@ Typically, actions are plain JavaScript objects that include the actions `TYPE`,
 So, for example, an action to add a todo item could be defined as an object:
 
 ```javascript
-const action = {
+c
+onst action = {
   type: 'ADD_TODO',
   params: {
     label: 'Learn Flux',
@@ -209,6 +210,68 @@ This action could be triggered by calling a dispatcher implementation: `dispatch
 to calculate new state. Once this new state is calculated, we can call `setState()` at the top level of our application
 to trigger a re-render with  fresh state.
 
+A simple implementation could look something like this (hypothetica dispatch implementation):
+
+```jsx
+class App extends Component {
+  constructor(props) {
+    this.state = {
+      todos: []
+    }
+    
+    // We initialize a new dispatcher at the top level of our app
+    // pass it theinitial application state and a callback that will
+    // be called every time a new state is reduced.
+    this.dispatcher = new Dispatcher(
+      this.state,
+      (newState) => this.setState(newState)
+    )
+  }
+  
+  render() {
+    // We render the Todo component with the current list of Todos
+    // notice we pass the entire dispatcher and expect the todoList to know what to do with it
+    return (
+      <View>
+        <TodoList
+          todos={this.state.todos}
+          dispatch={this.dispatcher}
+        />
+      </View>
+    )
+  }
+}
+
+class TodoList extends Component {
+  onAddTodo(todo) {
+    // Instead of calling a handler like onAddTodo passed from the TodoList
+    // We dispatch an ADD_TODO action, this action will trigger a re-evaluation of the entire
+    // state in the reducer function and the new state will be applied, propagating changes through the app
+    this.dispatcher.dispatch({
+      type: 'ADD_TODO',
+      params: {
+        label: todo,
+        completed: false
+      }
+    })
+  }
+  
+  render() {
+    // Render the current todos
+    const todoItems = mapTodoItems(this.props.todos)
+
+    // render the main view and handle button clicks
+    return (
+       <View>
+          <Button onClick={this.onAddTodo}/>
+          <View>
+            {todoItems}
+          </View>
+       </View>
+    )
+  }
+}
+```
 
 ### Resources
 - [Understanding the "render props" pattern](https://reactjs.org/docs/render-props.html)
