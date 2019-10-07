@@ -4,6 +4,7 @@ This is a simple implementation of the flux model implemented purely using React
 To use it, import or copy `flux.js` from this folder into your project.
 
 [Here's an example of using Flux.js with React Native in an Expo Snack.](https://snack.expo.io/@barakchamo/flux-from-scratch)
+[Here's the actual code](https://github.com/BarakChamo/Mobile-Application-Development/blob/master/resources/flux/flux.js)
 
 ## API
 
