@@ -274,6 +274,8 @@ class TodoList extends Component {
 ```
 
 ### Resources
+- [A minimal flux implementation in the resources folder](https://github.com/BarakChamo/Mobile-Application-Development/blob/master/resources/flux.js)
+- [An example of using this flux implementation](https://snack.expo.io/@barakchamo/flux-example)
 - [Understanding the "render props" pattern](https://reactjs.org/docs/render-props.html)
 - [Introduction to Flux](https://facebook.github.io/flux/docs/in-depth-overview)
 - [Redux, a popular flux implementation](https://redux.js.org/)
