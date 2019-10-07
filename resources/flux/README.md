@@ -3,6 +3,8 @@
 This is a simple implementation of the flux model implemented purely using React's Context and Hooks APIs.
 To use it, import or copy `flux.js` from this folder into your project.
 
+[Here's an example of using Flux.js with React Native in an Expo Snack.](https://snack.expo.io/@barakchamo/flux-from-scratch)
+
 ## API
 
 ### `Store` - Class
