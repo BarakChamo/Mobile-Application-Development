@@ -273,6 +273,42 @@ class TodoList extends Component {
 }
 ```
 
+### Storing data locally
+Managing state in our applications is well and good, but useless if everything resets once we close and reopen our apps. Before we dive into databases, let's learn how to store data locally on the device with `AsyncStorage`.
+
+`AsyncStorage` is a React Native that unifies device storage on iOS and Android. we begin by importing it from `react-native`:
+```javascript
+import {AsyncStorage} from 'react-native';
+```
+
+To store data, we call `setItem(key, data)`, this will return a Promise that we can use with `async/await` or `.then() / .catch()`:
+```javascript
+_storeData = async () => {
+  try {
+    await AsyncStorage.setItem('@MySuperStore:key', 'I like to save it.');
+  } catch (error) {
+    // Error saving data
+  }
+};
+```
+
+To retrieve an item, we call `getItem(key)`, again receiving a promise:
+```javscript
+_retrieveData = async () => {
+  try {
+    const value = await AsyncStorage.getItem('TASKS');
+    if (value !== null) {
+      // We have data!!
+      console.log(value);
+    }
+  } catch (error) {
+    // Error retrieving data
+  }
+};
+```
+
+Learn more about `AsyncStorage` [here](https://facebook.github.io/react-native/docs/asyncstorage).
+
 ### Resources
 - [A minimal flux implementation in the resources folder](https://github.com/BarakChamo/Mobile-Application-Development/blob/master/resources/flux/README.md)
 - [An example of using this flux implementation](https://snack.expo.io/@barakchamo/flux-from-scratch)
