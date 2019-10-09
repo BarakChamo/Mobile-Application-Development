@@ -279,6 +279,7 @@ class TodoList extends Component {
 - [Understanding the "render props" pattern](https://reactjs.org/docs/render-props.html)
 - [Introduction to Flux](https://facebook.github.io/flux/docs/in-depth-overview)
 - [Redux, a popular flux implementation](https://redux.js.org/)
+- [Expo documentation on AsyncStorage](https://docs.expo.io/versions/latest/react-native/asyncstorage/)
 
 ### Assignment - Midterms
 For your midterm project you should design and implement a new mobile application that features what you've
