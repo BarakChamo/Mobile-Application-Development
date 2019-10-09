@@ -27,6 +27,7 @@ Class repo for Mobile Application Development, Integrated Digital Media, Tandon 
 - [Expo.io documentation](https://docs.expo.io/versions/v35.0.0/)
 - [React Navigation](https://reactnavigation.org/docs/en/hello-react-navigation.html)
 - Testing on [iOS Simulator on OSX](https://docs.expo.io/versions/v35.0.0/workflow/ios-simulator/) and [Android Studio Emulator](https://docs.expo.io/versions/latest/workflow/android-studio-emulator/)
+- [React Native Paper UI library](https://reactnativepaper.com/)
 
 #### Design
 
