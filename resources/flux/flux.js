@@ -35,6 +35,28 @@ export default class Store {
 
     dispatch = (type, props) => this._dispatch({type, props})
 
+    ASYNC = {
+        FETCHING: 'FETCHING',
+        DONE: 'DONE',
+        ERROR: 'ERROR'
+    }
+
+    async dispatchAsync = (type, props, promise) => {
+        // First, dispatch a fetching action
+        this._dispatch({type, props, asyncType: this.ASYNC.FETCHING })
+
+        try {
+            // Await the promise
+            const result = await promise
+
+            // if the promise succeeded, dispatch a DONE with the payload
+            this._dispatch({type, props: result, asyncType: this.ASYNC.DONE })            
+        } catch (error) {
+            // If the promise failed, dispatch an ERROR with the error
+            this._dispatch({type, props: error, asyncType: this.ASYNC.ERROR })
+        }
+    }
+
     mapStore = ([state, dispatch]) => {
       this._dispatch = dispatch
       return { state, dispatch: this.dispatch }
