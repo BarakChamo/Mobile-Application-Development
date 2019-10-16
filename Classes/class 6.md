@@ -1,5 +1,7 @@
 ## Storing Data
 
+[AsyncStorage Snack Example](https://snack.expo.io/@barakchamo/local-storage)
+
 In the previous classes we learned how to design our applications to better handle large amounts of data and data-bound components. 
 We reviewed the `flux` model and implemented stores and reducers. Now comes the last part of dealing with data: *Where do we put it?*
 
