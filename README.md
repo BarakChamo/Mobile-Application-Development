@@ -1,7 +1,9 @@
 # Mobile Application Development
 Class repo for Mobile Application Development, Integrated Digital Media, Tandon School of Engineering, NYU
 
-[Live Share session](https://prod.liveshare.vsengsaas.visualstudio.com/join?76B95651E42DB2543E2ED73C903C0FE63C40)
+[Live Share session](https://prod.liveshare.vsengsaas.visualstudio.com/join?D4019220C6A7C57D75252915AC5F0A9ED51D)
+
+[Google Meet session](https://meet.google.com/kto-ezgp-jmg)
 
 ### Course details
 
