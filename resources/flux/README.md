@@ -39,6 +39,16 @@ The dispatch is the main interface we use to trigger state updates on our store,
 - `actionId` - the action enumerator (id) used to identify this action in your reducer
 - `actionProps` - an optional object containing additional action data (such as payloads, inputs, api data, etc.)
 
+##### `dispatchAsync(actionId, actionProps, promise)`
+The dispatchAsync allows you to trigger multiple dispatch cycles from a single dispatch call tracking the
+life cycle of the promise. When used, your reducer will receive an additional key in the `action` object, an `actionType`,
+that will be one of the valued specified in the `Store.ASYNC` enum: `FETCHING`, `DONE` and `ERROR`.
+
+- `actionId` - the action enumerator (id) used to identify this action in your reducer
+- `actionProps` - an optional object containing additional initial action data (such as payloads, inputs, api data, etc.)
+- `promise` - The promise to be tracked by the dispatcher. Each stage in the promise's cycle will trigger a dispatch event.
+
+Note that this will internally call `.then().catch()` on the passed promise and trigger dispatch events accordingly.
 
 ## Setup
 Begin by importing the flux `Store` module into your project:
