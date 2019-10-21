@@ -1,5 +1,7 @@
 ## Storing Data
 
+[AsyncStorage Snack Example](https://snack.expo.io/@barakchamo/local-storage)
+
 In the previous classes we learned how to design our applications to better handle large amounts of data and data-bound components. 
 We reviewed the `flux` model and implemented stores and reducers. Now comes the last part of dealing with data: *Where do we put it?*
 
@@ -263,3 +265,4 @@ db.collection("cities").where("state", "==", "CA")
 - [JavaScript `Promise`s](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [JavaScript's `async / await` syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - [Using Firebase with Expo](https://docs.expo.io/versions/latest/guides/using-firebase/)
+- [Expo's guide on networking (using fetch)](https://docs.expo.io/versions/latest/react-native/network/)
