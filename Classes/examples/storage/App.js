@@ -1,7 +1,10 @@
 import React from 'react'
 import { Button, StyleSheet, Text, View } from 'react-native'
 
+// Import initialized store singleton
 import store from './store'
+
+// Import components
 import MyButtonComponent from './MyButtonComponent'
 import MyLabelComponent from './MyLabelComponent'
 
