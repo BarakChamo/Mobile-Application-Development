@@ -1,7 +1,7 @@
 # Mobile Application Development
 Class repo for Mobile Application Development, Integrated Digital Media, Tandon School of Engineering, NYU
 
-[Live Share session](https://prod.liveshare.vsengsaas.visualstudio.com/join?D4019220C6A7C57D75252915AC5F0A9ED51D)
+[Live Share session](https://prod.liveshare.vsengsaas.visualstudio.com/join?1A2E5B25A652BD7821F5E2FB70835275428B)
 
 [Google Meet session](https://meet.google.com/kto-ezgp-jmg)
 
@@ -25,6 +25,7 @@ Class repo for Mobile Application Development, Integrated Digital Media, Tandon 
 ##### JavaScript
 - [JavaScript data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
 - [Primitive types and reference types in JavaScript](https://gist.github.com/branneman/7fb06d8a74d7e6d4cbcf75c50fec599c)
+- [JSON Placeholder testing API](https://jsonplaceholder.typicode.com/)
 
 ##### React
 - [React Component Lifecycle Diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
