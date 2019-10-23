@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { AsyncStorage, Button, StyleSheet, Text, View } from 'react-native'
 
 // Import initialized store singleton
 import store from './store'
@@ -7,7 +7,10 @@ import store from './store'
 // Import components
 import MyButtonComponent from './MyButtonComponent'
 import MyLabelComponent from './MyLabelComponent'
-import UserComponent from './UserComponent'
+// import UserComponent from './UserComponent'
+
+AsyncStorage.getItem('NUMBER')
+  .then(number => store.dispatch('SET_NUMBER', {value: number}))
 
 export default function App() {
   return (

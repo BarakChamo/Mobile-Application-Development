@@ -6,7 +6,7 @@ const initialState = {
     number: 10
 }
 
+
 // initialize store
 const store = new Store(reducer, initialState)
-
 export default store
