@@ -9,8 +9,9 @@ import MyButtonComponent from './MyButtonComponent'
 import MyLabelComponent from './MyLabelComponent'
 // import UserComponent from './UserComponent'
 
-AsyncStorage.getItem('NUMBER')
-  .then(number => store.dispatch('SET_NUMBER', {value: number}))
+// Hydrate state from async storage
+AsyncStorage.getItem('STATE')
+  .then(state => store.dispatch('HYDRATE', JSON.parse(state)))
 
 export default function App() {
   return (

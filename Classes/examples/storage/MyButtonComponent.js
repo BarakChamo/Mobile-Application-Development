@@ -28,12 +28,12 @@ class MyButtonComponent extends React.Component {
       this.props.store.dispatch("SET_NUMBER", { value: this.state.value })
     }
 
-    componentDidUpdate() {
-      AsyncStorage.setItem("NUMBER", this.props.store.state.number)
-    }
+    // componentDidUpdate() {
+    //   AsyncStorage.setItem("NUMBER", this.props.store.state.number)
+    // }
 
     render() {
-      console.log(this.props.store.state)
+      
       return (
         <View>
           <Button title={"Get number other than " + this.props.store.state.number} onPress={() => this.onPress()} />
