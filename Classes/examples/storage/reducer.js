@@ -1,5 +1,6 @@
-export default function reducer(state, { type, props, asyncType }) {
-    switch (type) {
+export default function reducer(state, action) {
+    console.log(action.type, action.props)
+    switch (action.type) {
         case 'RANDOM_NUMBER':
             const newRandomNumber = Math.floor(Math.random() * 100)
 

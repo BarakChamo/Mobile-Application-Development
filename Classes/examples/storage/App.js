@@ -7,6 +7,7 @@ import store from './store'
 // Import components
 import MyButtonComponent from './MyButtonComponent'
 import MyLabelComponent from './MyLabelComponent'
+import UserComponent from './UserComponent'
 
 export default function App() {
   return (

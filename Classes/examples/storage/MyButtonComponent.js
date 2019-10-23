@@ -9,7 +9,7 @@ class MyButtonComponent extends React.Component {
       // const promise = getRandomNumberPromise()
       // this.props.store.dispatchAsync('NUMBER', {}, promise)
 
-      this.props.store.dispatch('RANDOM_NUMBER', {})
+      this.props.store.dispatch('RANDOM_NUMBER', {previous: this.props.store.state.number})
     }
 
     render() {
