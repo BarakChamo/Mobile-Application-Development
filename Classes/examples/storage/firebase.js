@@ -1,4 +1,5 @@
-import * as firebase from 'firebase'
+import firebase from 'firebase'
+import '@firebase/firestore'
 import superSecretKeys from './credentials'
 
 // initialize firebase with loaded configuration
