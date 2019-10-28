@@ -5,7 +5,7 @@ function saveToLocalStorage(state) {
 }
 
 export default function reducer(state, action) {
-    console.log(state, action.type, action.props)
+    // console.log(state, action.type, action.props)
  
     let newState = {}
 
@@ -14,6 +14,14 @@ export default function reducer(state, action) {
             return {
                 ...state,
                 ...action.props
+            }
+
+        case 'ADD_ITEM':
+            const items = state.items
+            items.push(action.props)
+            return {
+                ...state,
+                items
             }
 
         case 'RANDOM_NUMBER':

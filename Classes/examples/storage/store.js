@@ -3,7 +3,8 @@ import reducer from './reducer'
 
 // Define initial store state
 const initialState = {
-    number: 10
+    number: 10,
+    items: []
 }
 
 

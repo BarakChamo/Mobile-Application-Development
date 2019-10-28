@@ -10,5 +10,8 @@ npm-debug.*
 web-build/
 web-report/
 
+# Prevent credentials from pushing to GitHub
+# credentials.js
+
 # macOS
 .DS_Store
