@@ -15,17 +15,29 @@ import MyList from './MyListComponent'
 // AsyncStorage.getItem('STATE')
   // .then(state => store.dispatch('HYDRATE', JSON.parse(state)))
 
-// Load complete collection from Firebase
-firestore.collection("items").get()
-  .then(function(data) {
-    console.log(data)
+// Load complete collection of items from Firebase
+// firestore.collection("items").get()
+//   // wait for promise to resolve
+//   .then(function(data) {
 
-    data.forEach(function(doc) {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.data())
-        store.dispatch('ADD_ITEM', doc.data())
-    });
+//     const items = []
+//     data.forEach(function(doc) {
+//         // doc.data() is never undefined for query doc snapshots
+//         items.push({...doc.data(), id: doc.id})
+//     });
+
+//     store.dispatch('ADD_ITEMS', items)
+//   });
+
+firestore.collection('items').onSnapshot((snapshot) => {
+  const items = []
+  snapshot.forEach(function(doc) {
+      // doc.data() is never undefined for query doc snapshots
+      items.push({...doc.data(), id: doc.id})
   });
+
+  store.dispatch('SET_ITEMS', items)
+});
 
 export default function App() {
   return (
