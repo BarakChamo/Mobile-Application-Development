@@ -52,6 +52,7 @@ class MyListComponent extends React.Component {
 
       return (
         <View>
+          <Text style={{fontSize: 20}}>{this.props.store.state.user.email}</Text>
           <View style={{marginBottom: 50, flexDirection: 'row'}}>
             <TextInput style={{backgroundColor: 'white'}} value={this.state.value} onChangeText={text => this.onChange(text)}/>
             <Button disabled={!this.state.value} title="Add Item" onPress={() => this.onClick()}/>

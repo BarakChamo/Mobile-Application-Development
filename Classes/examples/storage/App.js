@@ -3,13 +3,14 @@ import { AsyncStorage, Button, StyleSheet, Text, View } from 'react-native'
 
 // Import initialized store singleton
 import store from './store'
-import { firestore } from './firebase'
+import { auth, firestore } from './firebase'
 
 // Import components
 import MyButtonComponent from './MyButtonComponent'
 import MyLabelComponent from './MyLabelComponent'
 // import UserComponent from './UserComponent'
 import MyList from './MyListComponent'
+import MyAuth from './MyAuth'
 
 // Hydrate state from async storage
 // AsyncStorage.getItem('STATE')
@@ -35,9 +36,19 @@ firestore.collection('items').onSnapshot((snapshot) => {
       // doc.data() is never undefined for query doc snapshots
       items.push({...doc.data(), id: doc.id})
   });
-
+  console.log('data', items)
   store.dispatch('SET_ITEMS', items)
 });
+
+let AuthGate = (props) => {
+  if(props.store.state.user === null) {
+    return (<MyAuth/>)
+  } else {
+    return (<MyList />) 
+  }
+}
+
+AuthGate = store.connect(AuthGate)
 
 export default function App() {
   return (
@@ -45,7 +56,7 @@ export default function App() {
       <View style={styles.container}>
         {/* <MyLabelComponent /> */}
         {/* <MyButtonComponent /> */}
-        <MyList />
+        <AuthGate/>
       </View>
     </store.Provider>
   )

@@ -17,6 +17,11 @@ export default function reducer(state, action) {
                 ...action.props
             }
 
+        case 'AUTH':
+            return {
+                ...state,
+                user: action.props
+            }
         case 'ADD_ITEMS':
             var items = state.items
             return {
