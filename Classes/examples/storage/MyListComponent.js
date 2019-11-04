@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
 import store from './store'
+import { auth } from 'firebase'
 
 class MyListComponent extends React.Component {
     constructor(props) {
@@ -58,6 +59,7 @@ class MyListComponent extends React.Component {
             <Button disabled={!this.state.value} title="Add Item" onPress={() => this.onClick()}/>
           </View>
           {items}
+          <TouchableOpacity onClick={() => auth.signOut()}><Text>Sign Out</Text></TouchableOpacity>
         </View>
       )
     }
