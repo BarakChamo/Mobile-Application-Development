@@ -166,16 +166,21 @@ dbh.collection("characters").doc("mario").set({
 })
 ```
 
+#### Updating Records
+Calling `.set(...)` will overwrite the complete record, to update a partial object you can call `.update(...)`
+
+```javascript
+dbh.collection("characters").doc("mario").set({
+  outfitColor: "blue",
+})
+```
+
 #### Deleting Records
 To delete a record, locate hit and call `.delete()`
 The call will return a promise that will resolve upon succesful deletion of the record.
 
 ```javascript
-dbh.collection("characters").doc("mario").set({
-  employment: "plumber",
-  outfitColor: "red",
-  specialAttack: "fireball"
-})
+dbh.collection("characters").doc("mario").delete()
 ```
 
 #### Reading Records
