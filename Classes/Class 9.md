@@ -13,4 +13,5 @@
 - [Handling Authentication in Firebase](https://firebase.google.com/docs/auth/web/manage-users)
 - [Password Authentication in Firebase](https://firebase.google.com/docs/auth/web/password-auth)
 
-#### General web and JavaScript
+#### Tutorial
+- [Implementing Facebook authentication with Expo and Firebase](https://hackernoon.com/firebase-auth-using-facebook-log-in-on-expo-react-native-2c9f1aaf26b7)
