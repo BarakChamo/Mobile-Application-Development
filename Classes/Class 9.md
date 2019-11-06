@@ -27,7 +27,6 @@ Your app should be able to store and retrieve user records from Firestore and on
 There are many ways to guarantee users only have access to their content, and you'll have to find one that suits your needs and your app requirements.
 
 Your apps should feature:
-
-Login and signup views
-Automatic navigation based on authentication state
-User-created records filtered by the currently logged in user.
+- Login and signup views
+- Automatic navigation based on authentication state
+- User-created records filtered by the currently logged in user.
