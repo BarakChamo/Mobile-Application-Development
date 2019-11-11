@@ -30,13 +30,18 @@ import MyAuth from './MyAuth'
 //     store.dispatch('ADD_ITEMS', items)
 //   });
 
+// Wait for authentication
 auth.onAuthStateChanged((user) => {
+    // Check that a user is logged in
     if (user) {
-      console.log('USER ID', user.uid)
+      // Store user details in flux store
       store.dispatch('AUTH', user)
 
+      // Fetch items collection
       firestore.collection('items')
+      // Filter items by user ownership (only get the records created by the current user)
       .where("owner", "==", user.uid)
+      // Continuously listen for updates to the items query
       .onSnapshot((snapshot) => {
         const items = []
         snapshot.forEach(function(doc) {
