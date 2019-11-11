@@ -30,15 +30,25 @@ import MyAuth from './MyAuth'
 //     store.dispatch('ADD_ITEMS', items)
 //   });
 
-firestore.collection('items').onSnapshot((snapshot) => {
-  const items = []
-  snapshot.forEach(function(doc) {
-      // doc.data() is never undefined for query doc snapshots
-      items.push({...doc.data(), id: doc.id})
-  });
-  console.log('data', items)
-  store.dispatch('SET_ITEMS', items)
-});
+auth.onAuthStateChanged((user) => {
+    if (user) {
+      console.log('USER ID', user.uid)
+      store.dispatch('AUTH', user)
+
+      firestore.collection('items')
+      .where("owner", "==", user.uid)
+      .onSnapshot((snapshot) => {
+        const items = []
+        snapshot.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            items.push({...doc.data(), id: doc.id})
+        });
+        console.log('data', items)
+        store.dispatch('SET_ITEMS', items)
+      });
+      
+    }
+})
 
 let AuthGate = (props) => {
   if(props.store.state.user === null) {

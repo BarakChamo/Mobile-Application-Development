@@ -23,7 +23,7 @@ class MyListComponent extends React.Component {
       this.setState({password: text})
     }
 
-    onChangePassword(text) {
+    onChangeName(text) {
       this.setState({name: text})
     }
 

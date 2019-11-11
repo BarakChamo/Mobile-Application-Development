@@ -22,7 +22,8 @@ class MyListComponent extends React.Component {
       
       this.props.store.dispatch('ADD_ITEM', {
         label: this.state.value,
-        color: Math.floor(Math.random()*16777215).toString(16)
+        color: Math.floor(Math.random()*16777215).toString(16),
+        owner: this.props.store.state.user.uid
       })
     }
 
@@ -50,7 +51,7 @@ class MyListComponent extends React.Component {
             </View>
         ))
         )
-
+console.dir(auth)
       return (
         <View>
           <Text style={{fontSize: 20}}>{this.props.store.state.user.email}</Text>

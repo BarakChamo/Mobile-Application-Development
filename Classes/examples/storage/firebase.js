@@ -16,7 +16,7 @@ export { firestore as firestore }
 const auth = firebase.auth()
 
 export { auth as auth }
-
+// auth.signOut()
 // To sign up
 // auth.createUserWithEmailAndPassword()
 
@@ -24,7 +24,6 @@ export { auth as auth }
 // auth.signInWithEmailAndPassword()
 
 auth.onAuthStateChanged((user) => {
-    fluxStore.dispatch('AUTH', user)
 
     console.log('USER', user)
     // auth.signOut()
