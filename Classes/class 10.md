@@ -58,7 +58,7 @@ There are two ways to trigger an `https` function.
 #### Trigger by a network request
 
 You can trigger a cloud function by URL by visiting the relative path to your project's function:
-https://us-central1-<project-id>.cloudfunctions.net/<function_name>
+`https://us-central1-<project-id>.cloudfunctions.net/<function_name>`
 
 #### Trigger directly from app
 You can also trigger
@@ -89,3 +89,4 @@ This will package, upload and activate the functions you created.
 - [Firestore Function triggers](https://firebase.google.com/docs/functions/firestore-events)
 - [Function event context](https://firebase.google.com/docs/reference/functions/cloud_functions_.eventcontext.html)
 - [Firestore triggers](https://firebase.google.com/docs/reference/functions/providers_firestore_.documentbuilder.html#on-create)
+- [Functions HTTPS triggers](https://firebase.google.com/docs/functions/http-events)
