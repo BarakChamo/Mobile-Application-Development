@@ -1,7 +1,16 @@
-import { StyleSheet } from 'react-native'
+import { Platform, StyleSheet } from 'react-native'
+
+Platform.select({
+    ios: {borderRadius: layoutParamters},
+    android: {borderRadius: 0}
+})
 
 const brandColors = {
-    main: 'orange'
+    main: 'lightblue',
+    warning: 'orange',
+    error: 'red',
+    valid: 'lightgreen',
+    disabled: 'lightgray'
 }
 
 const layoutParamters = {
@@ -17,13 +26,35 @@ const typography = {
 
 const buttonStyle = StyleSheet.create({
   button: {
+    margin: 10,
     backgroundColor: brandColors.main,
     padding: 10,
     borderRadius: layoutParamters.borderRadius,
-  }
+  },
+  warning: {
+      backgroundColor: brandColors.warning
+  },
+  error: {
+    backgroundColor: brandColors.error
+    },
+valid: {
+    backgroundColor: brandColors.valid
+},
+disabled: {
+    backgroundColor: brandColors.disabled
+},
 })
 
 export { buttonStyle }
+
+const containerStyle = StyleSheet.create({
+    card: {
+        margin: 10,
+        borderRadius: layoutParamters.borderRadius
+    }
+})
+
+export { containerStyle }
 
 const textStyle = StyleSheet.create({
     main: {
@@ -40,6 +71,18 @@ const textStyle = StyleSheet.create({
     subheading: {
 
     },
+    warning: {
+        color: brandColors.warning
+    },
+    error: {
+      color: brandColors.error
+      },
+  valid: {
+      color: brandColors.valid
+  },
+  disabled: {
+      color: brandColors.disabled
+  },
 })
 
 export { textStyle }
