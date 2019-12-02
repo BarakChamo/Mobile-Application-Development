@@ -11,8 +11,8 @@ export default function App() {
     <View style={[styles.container]}>
       <Text style={[textStyle.main, textStyle.heading]}>Amazing App!</Text>
       <Link error style={textStyle.main}>Open up App.js to start working on your app!</Link>
-      <Button warning color="purple" label="My Button" />
-      <Button error color="purple" label="My Button" />
+      <Button warning label="My Button" />
+      <Button error label="My Button" />
       <Button valid label="My Button" />
       <Button disabled label="My Button" />
       <Button label="My Button" />
